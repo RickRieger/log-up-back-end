@@ -46,8 +46,8 @@ function isValidEmail(email){
 
 function isValidPassword(password){
   return password.length >= 8 &&
-  password.toUpperCase !== password &&
-  password.toLowerCase !== password;
+  password.toUpperCase() !== password &&
+password.toLowerCase() !== password;
 }
 
 function isRegisteredUser(email){
@@ -55,13 +55,14 @@ return email === user1 || email === user2 || email === user3;
 }
 
 function passwordMatches(email, password){
-if (email === user1 && password === password1)
-return true;
-if (email === user2 && password === password2)
-return true;
-if (email === user2 && password === password3)
-return true;
-else return false;
+return ( 
+
+ (email === user1 && password === password1) ||
+
+ (email === user2 && password === password2) ||
+
+ (email === user3 && password === password3)
+);
 }
 
 
