@@ -13,64 +13,35 @@ const password3 = 'like a BOSS';
 
 // **YOUR** code below. Pass those tests!
 
-// const isValidEmail = (email) => {
-//   if (email.includes('@codeimmersives.com') && typeof email[email.length - 20] === 'string') {
-//     return true
-//   }
-//   return false
-// }
+const DOMAIN = '@codeimmersives.com';
 
-// function isValidPassword(password){
-//   if (password.length >= 8 && password )
-// }
-
-// function isValidEmail(email){
-//   if (email.endsWith('@codeimmersives.com'))
-//   return true;
-//   else{
-//     return false;
-//   }
-// }
-
-// function isValidEmailAlt(email){
-//   if (email.endsWith('@codeimmersives.com') && email.length >= 20)
-//   return true;
-//   else{
-//     return false;
-//   }
-// }
-
-function isValidEmail(email){
-  return email.endsWith('@codeimmersives.com') && email.length >= 20;
+// Ends with the domain AND has at least one character before the "@"
+function isValidEmail(email) {
+  return email.endsWith(DOMAIN) && email.length > DOMAIN.length;
 }
 
-function isValidPassword(password){
-  return password.length >= 8 &&
-  password.toUpperCase() !== password &&
-password.toLowerCase() !== password;
+// At least 8 characters, with at least one lowercase and one uppercase letter.
+// If upper-casing the whole string changes it, it had a lowercase letter (and vice versa).
+function isValidPassword(password) {
+  return (
+    password.length >= 8 &&
+    password.toUpperCase() !== password &&
+    password.toLowerCase() !== password
+  );
 }
 
-function isRegisteredUser(email){
-return email === user1 || email === user2 || email === user3;
+function isRegisteredUser(email) {
+  return email === user1 || email === user2 || email === user3;
 }
 
-function passwordMatches(email, password){
-return ( 
-
- (email === user1 && password === password1) ||
-
- (email === user2 && password === password2) ||
-
- (email === user3 && password === password3)
-);
+// The email must belong to a user AND the password must be THAT user's password
+function passwordMatches(email, password) {
+  return (
+    (email === user1 && password === password1) ||
+    (email === user2 && password === password2) ||
+    (email === user3 && password === password3)
+  );
 }
-
-
-
-
-
-
-
 
 
 
