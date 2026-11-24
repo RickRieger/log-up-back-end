@@ -13,33 +13,6 @@ const password3 = 'like a BOSS';
 
 // **YOUR** code below. Pass those tests!
 
-// const isValidEmail = (email) => {
-//   if (email.includes('@codeimmersives.com') && typeof email[email.length - 20] === 'string') {
-//     return true
-//   }
-//   return false
-// }
-
-// function isValidPassword(password){
-//   if (password.length >= 8 && password )
-// }
-
-// function isValidEmail(email){
-//   if (email.endsWith('@codeimmersives.com'))
-//   return true;
-//   else{
-//     return false;
-//   }
-// }
-
-// function isValidEmailAlt(email){
-//   if (email.endsWith('@codeimmersives.com') && email.length >= 20)
-//   return true;
-//   else{
-//     return false;
-//   }
-// }
-
 function isValidEmail(email){
   return email.endsWith('@codeimmersives.com') && email.length >= 20;
 }
